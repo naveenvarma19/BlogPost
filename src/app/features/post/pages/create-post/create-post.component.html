@@ -1,0 +1,21 @@
+<div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl mt-8 mb-4 font-extrabold">Create Post</h1>
+
+    <form [formGroup]="createPostForm" (ngSubmit)="onCreatePost()">
+        <div class="mt-4">
+            <label for="title" class="w-full">Title</label>
+            <input type="text" class="w-full bg-neutral-100 px-4 py-2 mt-2" placeholder="Enter a title for your post"
+                id="title" name="title" formControlName="title" />
+        </div>
+
+        <div class="mt-4">
+            <label for="content" class="w-full">Content</label>
+            <textarea class="w-full bg-neutral-100 px-4 py-2 mt-2 h-[200px]" id="content" name="content"
+                placeholder="Post content" formControlName="content"></textarea>
+        </div>
+
+        <div class="mt-4">
+            <button class="rounded px-4 py-2 bg-indigo-400 text-white">Publish</button>
+        </div>
+    </form>
+</div>
